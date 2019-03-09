@@ -1,0 +1,54 @@
+﻿<Window x:Class="WYD_strdef_editor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WYD_strdef_editor"
+        mc:Ignorable="d"
+        Title="WYD strdef editor" Height="550" Width="1200" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" TextOptions.TextFormattingMode="Display" Background="#FF3C3C3C" FontFamily="Consolas">
+	<Grid VerticalAlignment="Top" HorizontalAlignment="Left">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="10"></RowDefinition>
+			<RowDefinition Height="20"></RowDefinition>
+			<RowDefinition Height="10"></RowDefinition>
+			<RowDefinition Height="400"></RowDefinition>
+			<RowDefinition Height="10"></RowDefinition>
+			<RowDefinition Height="20"></RowDefinition>
+			<RowDefinition Height="10"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="10"></ColumnDefinition>
+			<ColumnDefinition Width="400"></ColumnDefinition>
+			<ColumnDefinition Width="10"></ColumnDefinition>
+			<ColumnDefinition Width="600"></ColumnDefinition>
+			<ColumnDefinition Width="10"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<Label Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1" Content="Conteúdo do strdef.bin" Foreground="White" Background="{x:Null}"></Label>
+
+		<ListBox x:Name="UI_List" BorderThickness="0" Background="#FF2D2D2D" Grid.Row="3" Grid.Column="1" Foreground="White" BorderBrush="{x:Null}"></ListBox>
+
+		<StackPanel Grid.Row="3" Grid.Column="3">
+			<Label Padding="0" Content="Valor a ser editado:" Foreground="White" Background="{x:Null}" Margin="0,0,0,2"/>
+			<Grid Margin="0,0,0,10">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"></RowDefinition>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+					<ColumnDefinition Width="10"></ColumnDefinition>
+					<ColumnDefinition Width="30"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				<TextBox x:Name="UI_EDIT" Padding="10,6" Margin="0" BorderThickness="0"/>
+				<Label x:Name="UI_LENGTH" Padding="0" Content="0" Foreground="White" Background="{x:Null}" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+			</Grid>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+				<Button x:Name="UI_CANCEL" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="20,6" BorderThickness="0" Content="Cancelar" Margin="0,0,10,0"/>
+				<Button x:Name="UI_SAVE" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="20,6" BorderThickness="0" Content="Salvar"/>
+			</StackPanel>
+		</StackPanel>
+
+		<Label Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Row="5" Grid.Column="1" Content="Desenvolvido por Rechdan para a comunidade WYD Private" Foreground="White" Background="{x:Null}" Grid.ColumnSpan="3"></Label>
+	</Grid>
+</Window>
